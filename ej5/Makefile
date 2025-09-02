@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = 4
+TARGET = 5
 
 all: $(TARGET)
 
-$(TARGET): 4.o
+$(TARGET): $(TARGET).o
 	$(CC) $(CFLAGS) $^ -o $@
 
-4.o: 4.c
+$(TARGET).o: $(TARGET).c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
